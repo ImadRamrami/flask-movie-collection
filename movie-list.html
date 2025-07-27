@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+  <head>
+
+    <meta charset="utf-8">
+    <title>Films : liste</title>
+
+  </head>
+
+  <body>
+
+    <h1> Liste des films </h1>
+    <a href="/add-movie-form">Ajouter un film</a>
+    <ol>
+      {% for movie in movies %}
+      <li>
+        {{movie.title}}
+        <a href="/movie-details/{{movie.id}}">détails</a> 
+        <a href="/edit-movie-form/{{movie.id}}">modifier</a> 
+        <a href="/delete-movie-form/{{movie.id}}">supprimer</a> 
+        {{title}}
+      </li>
+      {% endfor %}
+    </ol>
+
+  </body>
+</html>
