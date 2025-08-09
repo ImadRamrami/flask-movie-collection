@@ -7,7 +7,7 @@ class MoviesDB:
     self.load(db_path)
 
   def load(self, db_path):
-    with open(db_path, 'r') as fh:
+    with open(db_path, 'r', encoding='utf-8') as fh:
       movies = json.load(fh)
     # convert keys from string to integers
     self.movies = {int(key): movies[key] for key in movies}

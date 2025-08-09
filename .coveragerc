@@ -1,0 +1,12 @@
+# .coveragerc
+[run]
+branch = True
+source = server
+
+[report]
+show_missing = True
+omit =
+    */venv/*
+    */.venv/*
+    tests/*
+fail_under = 80

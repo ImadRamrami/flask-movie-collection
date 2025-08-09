@@ -1,5 +1,8 @@
 from flask import Flask, render_template, request, redirect
 import movies
+from pathlib import Path
+BASE_DIR = Path(__file__).resolve().parent
+db_path = BASE_DIR / "movies.json"   
 
 app = Flask(__name__)
 
